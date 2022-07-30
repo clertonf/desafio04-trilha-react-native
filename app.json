@@ -25,6 +25,9 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#FFF"
       }
+    },
+    "ios": {
+      "bundleIdentifier": "org.name.streamdata"
     }
   }
 }

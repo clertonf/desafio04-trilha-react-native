@@ -1,16 +1,17 @@
-import { MotiView } from 'moti';
-import { RectButton } from 'react-native-gesture-handler';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
-import styled from 'styled-components/native';
+import { MotiView } from "moti";
+import { RectButton } from "react-native-gesture-handler";
+import { getStatusBarHeight } from "react-native-iphone-x-helper";
+import { AnyStyledComponent } from "styled-components";
+import styled from "styled-components/native";
 
 export const Container = styled(MotiView)`
   flex: 1;
-  background-color: ${props => props.theme.colors.black};
+  background-color: ${(props) => props.theme.colors.black};
 `;
 
 export const Header = styled.View`
   padding: ${getStatusBarHeight(true) + 10}px 12px 24px 24px;
-  background-color: ${props => props.theme.colors.purple};
+  background-color: ${(props) => props.theme.colors.purple};
 
   flex-direction: row;
   justify-content: space-between;
@@ -32,12 +33,14 @@ export const Avatar = styled.Image`
 `;
 
 export const UserInfoText = styled.Text`
-  color: ${props => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.white};
   font-size: 20px;
-  font-family: ${props => props.theme.fonts.regular};
+  font-family: ${(props) => props.theme.fonts.regular};
 `;
 
-export const SignOutButton = styled(RectButton)`
+export const SignOutButton = styled(
+  RectButton as unknown as AnyStyledComponent
+)`
   justify-content: center;
 
   align-items: center;
@@ -55,9 +58,9 @@ export const UserFollowedStreamsTitle = styled.Text`
   margin-bottom: 24px;
   margin-left: 24px;
 
-  color: ${props => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.white};
   font-size: 20px;
-  font-family: ${props => props.theme.fonts.bold};
+  font-family: ${(props) => props.theme.fonts.bold};
 `;
 
 export const TopGames = styled.View`
@@ -68,7 +71,7 @@ export const TopGamesTitle = styled.Text`
   margin-bottom: 24px;
   margin-left: 24px;
 
-  color: ${props => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.white};
   font-size: 20px;
-  font-family: ${props => props.theme.fonts.bold};
+  font-family: ${(props) => props.theme.fonts.bold};
 `;
